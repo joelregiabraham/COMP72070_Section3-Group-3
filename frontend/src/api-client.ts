@@ -34,7 +34,7 @@ export const signIn = async (formData: SignInFormData) =>{
     throw new Error(body.message)
   }
   return body;
-}
+};
 
 export const validateToken = async () => {
   const response = await fetch(`${API_BASE_URL}/api/auth/validate-token`, {
@@ -57,4 +57,19 @@ export const signOut = async () => {
   if(!response.ok){
     throw new Error("Error during Sign Out");
   }
-}
+};
+
+
+export const addMyHotel = async (hotelFormData: FormData) => {
+  const response = await fetch(`${API_BASE_URL}/api/my-hotels`, {
+    method: "POST",
+    credentials: "include",
+    body: hotelFormData,
+  });
+
+  if (!response.ok) {
+    throw new Error("Failed to add hotel");
+  }
+
+  return response.json();
+};
