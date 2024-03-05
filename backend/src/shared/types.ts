@@ -1,11 +1,11 @@
 export type HotelType = {
-    _id: String;
-    userId: String;
-    name: String;
-    city: String;
-    country: String;
-    description: String;
-    type: String;
+    _id: string;
+    userId: string;
+    name: string;
+    city: string;
+    country: string;
+    description: string;
+    type: string;
     adultCount: number;
     childCount: number;
     facilities: string[];
@@ -13,4 +13,5 @@ export type HotelType = {
     starRating: number;
     imageUrls: string[];
     lastUpdated: Date;
-}
+    //bookings: BookingType[];
+  };
