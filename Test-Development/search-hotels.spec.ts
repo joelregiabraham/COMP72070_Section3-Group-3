@@ -63,4 +63,5 @@ test("Should book hotel", async ({page})=>{
 
     await page.getByRole("link",{ name:"My Bookings"}).click();
     await expect(page.getByText("Dublin Getaways")).toBeVisible();
+
 });
