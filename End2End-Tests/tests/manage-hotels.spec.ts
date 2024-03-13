@@ -3,6 +3,7 @@ import path from "path";
 
 const UI_URL = "http://localhost:5173/";
 
+
 test.beforeEach(async ({ page }) => {
   await page.goto(UI_URL);
 
@@ -48,6 +49,7 @@ test("should allow user to add a hotel", async ({ page }) => {
   await expect(page.getByText("Hotel Saved!")).toBeVisible();
 });
 
+// test case 3 - Note: Info should be changed accordingly
 test("should display hotels", async ({ page }) => {
   await page.goto(`${UI_URL}my-hotels`);
 
@@ -65,6 +67,7 @@ test("should display hotels", async ({ page }) => {
   await expect(page.getByRole("link", { name: "Add Hotel" })).toBeVisible();
 });
 
+// test case 4
 test("should edit hotel", async ({ page }) => {
   await page.goto(`${UI_URL}my-hotels`);
 
