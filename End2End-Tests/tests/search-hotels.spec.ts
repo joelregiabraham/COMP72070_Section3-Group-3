@@ -6,6 +6,9 @@ test.beforeEach(async ({ page }) => {
   await page.goto(UI_URL);
 
   // get the sign in button
+  await page.waitForTimeout(2000);
+  await page.getByRole("link", { name: "Sign In" }).click();
+  await page.waitForTimeout(1000);
   await page.getByRole("link", { name: "Sign In" }).click();
 
   await expect(page.getByRole("heading", { name: "Sign In" })).toBeVisible();
@@ -57,7 +60,7 @@ test("should book hotel", async ({ page }) => {
   await page.getByText("The Grand Hyatt").click();
   await page.getByRole("button", { name: "Book now" }).click();
 
-  await expect(page.getByText("Total Cost: $1350.00")).toBeVisible();
+  await expect(page.getByText("Total Cost: $966.00")).toBeVisible();
 
   const stripeFrame = page.frameLocator("iframe").first();
   await stripeFrame
@@ -105,7 +108,7 @@ test("Book Hotel with Different Payment Cards", async ({ page }) => {
   await page.getByRole("button", { name: "Search" }).click();
   await page.getByText("The Grand Hyatt").click();
   await page.getByRole("button", { name: "Book now" }).click();
-  await expect(page.getByText("Total Cost: $1350.00")).toBeVisible();
+  await expect(page.getByText("Total Cost: $966.00")).toBeVisible();
 
   const stripeFrame = page.frameLocator("iframe").first();
   await stripeFrame.locator('[placeholder="Card number"]').fill("5555555555554444"); // Different card number
@@ -127,7 +130,7 @@ test("Attempt to Book Hotel with Expired Payment Card", async ({ page }) => {
   await page.getByRole("button", { name: "Search" }).click();
   await page.getByText("The Grand Hyatt").click();
   await page.getByRole("button", { name: "Book now" }).click();
-  await expect(page.getByText("Total Cost: $1350.00")).toBeVisible();
+  await expect(page.getByText("Total Cost: $966.00")).toBeVisible();
 
  const stripeFrame = page.frameLocator("iframe").first();
   await stripeFrame.locator('[placeholder="Card number"]').fill("5555555555554444"); // Different card number
@@ -151,7 +154,7 @@ test("Attempt to Book Hotel without Filling Required Fields", async ({ page }) =
   await page.getByRole("button", { name: "Search" }).click();
   await page.getByText("The Grand Hyatt").click();
   await page.getByRole("button", { name: "Book now" }).click();
-  await expect(page.getByText("Total Cost: $1350.00")).toBeVisible();
+  await expect(page.getByText("Total Cost: $966.00")).toBeVisible();
   await page.getByRole("button", { name: "Confirm Booking" }).click();
   await expect(page).not.toBe('Booking Saved!');
 });

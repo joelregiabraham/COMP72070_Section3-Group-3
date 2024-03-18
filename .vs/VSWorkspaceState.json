@@ -1,11 +1,8 @@
 {
   "ExpandedNodes": [
     "",
-    "\\End2End-Tests",
-    "\\End2End-Tests\\tests",
-    "\\frontend",
-    "\\frontend\\src"
+    "\\frontend\\src",
+    "\\frontend\\src\\config"
   ],
-  "SelectedNode": "\\End2End-Tests\\tests\\manage-hotels.spec.ts",
   "PreviewInSolutionExplorer": false
 }
