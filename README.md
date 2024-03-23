@@ -1,3 +1,8 @@
+![image](https://github.com/joelregiabraham/COMP72070_Section3-Group-3/assets/122996489/10b2a18d-9786-4200-aa7e-53a5cdc82a6d)
+
+![image](https://github.com/joelregiabraham/COMP72070_Section3-Group-3/assets/122996489/1d7c2b2a-8a88-43a3-87d4-a4d5b64d6c07)
+
+
 Running the Application
 
     Backend:
