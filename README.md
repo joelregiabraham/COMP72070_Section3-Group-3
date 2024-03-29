@@ -2,6 +2,9 @@
 
 ![image](https://github.com/joelregiabraham/COMP72070_Section3-Group-3/assets/122996489/1d7c2b2a-8a88-43a3-87d4-a4d5b64d6c07)
 
+Scan the Code to view our website
+![image](https://github.com/joelregiabraham/COMP72070_Section3-Group-3/assets/122996489/a1f41449-26f0-4047-bf55-d418fb8d1f7f)
+
 
 Running the Application
 
